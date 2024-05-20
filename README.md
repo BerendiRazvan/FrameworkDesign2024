@@ -44,12 +44,12 @@ If you want to use this component in your own application, you must follow the f
 
 1. Copy the code from the file `./components/popup-alert`
 2. Use the component in your code from the `.html` file
-   ```<app-popup-alert></app-popup-alert>```
+   '''<app-popup-alert></app-popup-alert>'''
 3. Declare the component in your code from the `.ts` file corresponding to the `.html` file
    @ViewChild(PopupAlertComponent) alert!: PopupAlertComponent;
 4. When you need to display an alert, call the `openAlert()` method in the code from the `.ts` file
-   Information: ```this.alert.openAlert(AlertType.INFORMATION, "Your information message...")```
-   Success: ```this.alert.openAlert(AlertType.SUCCESS, "Your success message...")```
-   Warning: ```this.alert.openAlert(AlertType.WARNING, "Your warning message...")```
-   Error: ```this.alert.openAlert(AlertType.ERROR, "Your error message...")```
+   Information: '''this.alert.openAlert(AlertType.INFORMATION, "Your information message...")'''
+   Success: '''this.alert.openAlert(AlertType.SUCCESS, "Your success message...")'''
+   Warning: '''this.alert.openAlert(AlertType.WARNING, "Your warning message...")'''
+   Error: '''this.alert.openAlert(AlertType.ERROR, "Your error message...")'''
 
