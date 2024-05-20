@@ -33,7 +33,7 @@ The popup alert component contains an icon (chosen by the user), a message (chos
 ![Success Alert](./readme.images/success.png)
 
 #### Warning:
-![Warning Alert](./readme.images/warining.png)
+![Warning Alert](./readme.images/warning.png)
 
 #### Error:
 ![Error Alert](./readme.images/error.png)
