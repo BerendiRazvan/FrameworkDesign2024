@@ -2,26 +2,70 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
 
-## Development server
+## Introduction
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This is the application made for the Framework Design project, after running the `npm install`, `ng build` and `ng serve` commands, access the link [here](http://localhost:4200/periodic-table).
 
-## Code scaffolding
+The project illustrates the implementation and use of several elements within a chemistry application that contains chemical elements from the periodic table.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This page is created from several components, so you can find:
+- a popup alert component
+- a data table component
+- a pagination for table component
+- a add/edit modal component
+- a button component
+- plus others
 
-## Build
+## App Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The application manages the elements in the table, so there are view, add, update and delete functionalities
 
-## Running unit tests
+POZA APP
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Implementation Details - Popup Alert Component
 
-## Running end-to-end tests
+The popup alert component contains an icon (chosen by the user), a message (chosen by the user) and a close button. It closes automatically after 5 seconds if the message is shorter than 120 characters or after more time if the message is longer. Such an alert has specific elements and can be of 4 types:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### Information:
+POZA ALERTA
 
-## Further help
+#### Success:
+POZA ALERTA
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Warning:
+POZA ALERTA
+
+#### Error:
+POZA ALERTA
+
+### Usage
+
+If you want to use this component in your own application, you must follow the following steps:
+
+1. Copy the code from the file `./components/popup-alert`
+2. Use the component in your code from the `.html` file
+   ```
+   <app-popup-alert></app-popup-alert>
+   ```
+3. Declare the component in your code from the `.ts` file corresponding to the `.html` file
+   ```
+   @ViewChild(PopupAlertComponent) alert!: PopupAlertComponent;
+   ```
+4. When you need to display an alert, call the `openAlert()` method in the code from the `.ts` file
+   #### Information: 
+   ```
+   this.alert.openAlert(AlertType.INFORMATION, "Your information message...")
+   ```
+   #### Success: 
+   ```
+   this.alert.openAlert(AlertType.SUCCESS, "Your success message...")
+   ```
+   #### Warning: 
+   ```
+   this.alert.openAlert(AlertType.WARNING, "Your warning message...")
+   ```
+   #### Error: 
+   ```
+   this.alert.openAlert(AlertType.ERROR, "Your error message...")
+   ```
+
