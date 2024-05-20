@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from "@angular/core";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Subject} from "rxjs";
 import {AlertType} from "../../model/popup-alert/alert-type.enum";
@@ -6,6 +6,7 @@ import {PeriodicElementService} from "../../service/periodic-element/periodic-el
 import {ModalType} from "../../model/modal/modal-type.enum";
 import {ModalInterface} from "../../model/modal/modal.interface";
 import {PeriodicElement} from "../../model/periodic-element/periodic-element.model";
+import {PopupAlertComponent} from "../popup-alert/popup-alert.component";
 
 @Component({
   selector: 'app-element-modal',
@@ -14,6 +15,8 @@ import {PeriodicElement} from "../../model/periodic-element/periodic-element.mod
 })
 
 export class ElementModalComponent implements ModalInterface, OnInit {
+  @ViewChild(PopupAlertComponent) alert!: PopupAlertComponent;
+
   @Input({required: true}) modalType!: ModalType;
   @Input() modalTitle!: string;
   @Input() modalButton!: string;
@@ -66,6 +69,8 @@ export class ElementModalComponent implements ModalInterface, OnInit {
       if (this.modalType === ModalType.EDIT) {
         this.editElement();
       }
+    } else {
+      this.alert.openAlert(AlertType.ERROR, "Please complete all the fields to be able to add a new element!")
     }
   }
 
@@ -81,7 +86,15 @@ export class ElementModalComponent implements ModalInterface, OnInit {
   }
 
   editElement() {
-    this.service.editElement(this.elementForEdit,{
+    if (this.elementForEdit.name == this.name &&
+      this.elementForEdit.symbol == this.symbol &&
+      this.elementForEdit.weight == this.weight &&
+      this.elementForEdit.description == this.description) {
+      this.alert.openAlert(AlertType.WARNING, "The data for " + this.name + " remained unchanged!");
+      return;
+    }
+
+    this.service.editElement(this.elementForEdit, {
       name: this.name,
       symbol: this.symbol,
       weight: this.weight,

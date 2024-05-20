@@ -44,9 +44,6 @@ export class PopupAlertComponent {
         this.alertTypeIcon = "assets/icons/information-icon.svg";
         this.style = "alert-primary";
         break;
-      default:
-        this.alertTypeIcon = "assets/icons/information-icon.svg";
-        this.style = "alert-primary";
     }
 
     this.showAlert();

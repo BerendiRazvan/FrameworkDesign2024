@@ -1,4 +1,5 @@
 <div class="modal-backdrop" *ngIf="(modalOpen$ | async)">
+  <app-popup-alert></app-popup-alert>
   <div class="modal">
     <div class="modal-content">
       <div class="modal-header justify-content-center">
@@ -33,7 +34,7 @@
           <div class="form-group">
             <label for="description" class="col-form-label">Description</label>
             <textarea class="form-control" id="description" formControlName="description" value='{{description}}'
-                      (change)="resetDescriptionError()" style="min-height: 100px;"
+                      (change)="resetDescriptionError()" style="min-height: 70px;"
                       placeholder="Enter a description for the periodic element"></textarea>
             <div #descriptionFieldError class="error-message">{{descriptionErrorMessage}}</div>
           </div>

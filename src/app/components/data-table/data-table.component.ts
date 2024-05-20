@@ -78,6 +78,7 @@ export class DataTableComponent implements AfterViewInit {
   }
 
   editItemOnClick(item: any) {
+    this.alert.openAlert(AlertType.INFORMATION, item.name + " will be edited.")
     this.selectedElementValue.emit(item);
   }
 
