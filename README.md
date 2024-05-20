@@ -26,16 +26,16 @@ POZA APP
 
 The popup alert component contains an icon (chosen by the user), a message (chosen by the user) and a close button. It closes automatically after 5 seconds if the message is shorter than 120 characters or after more time if the message is longer. Such an alert has specific elements and can be of 4 types:
 
-Information:
+#### Information:
 POZA ALERTA
 
-Success:
+#### Success:
 POZA ALERTA
 
-Warning:
+#### Warning:
 POZA ALERTA
 
-Error:
+#### Error:
 POZA ALERTA
 
 ### Usage
