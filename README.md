@@ -20,7 +20,7 @@ This page is created from several components, so you can find:
 
 The application manages the elements in the table, so there are view, add, update and delete functionalities
 
-POZA APP
+![App](./readme.images/app.png)
 
 ## Implementation Details - Popup Alert Component
 
