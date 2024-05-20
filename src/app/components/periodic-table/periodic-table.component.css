@@ -1,0 +1,49 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  min-height: 90vh;
+  width: 90%;
+  min-width: 80vw;
+}
+
+.header-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: auto;
+  margin: auto;
+  height: 25%;
+  width: 90%;
+}
+
+.table-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  margin: auto;
+  height: 74.5%;
+  width: 82%;
+}
+
+@media screen and (max-width: 770px) {
+  /* Stop resizing and overflow hidden */
+}
+
+@media screen and (max-height: 450px) {
+  /* Stop resizing and overflow hidden */
+}

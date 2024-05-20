@@ -1,0 +1,10 @@
+<div class="special-header-container">
+  <img [src]="backgroundImage" class="header-image" alt="Header Image">
+  <div *ngIf="isAddButtonVisible" class="button-container">
+    <app-icon-button #addButton
+                     (click)="openAddModal()"
+                     [buttonIcon]="buttonIcon"
+                     [buttonText]="buttonText"
+    ></app-icon-button>
+  </div>
+</div>

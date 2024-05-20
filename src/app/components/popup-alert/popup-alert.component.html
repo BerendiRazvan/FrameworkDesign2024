@@ -1,0 +1,9 @@
+<div class="alert alert-dismissible align-items-center fade show alert-style {{style}}" *ngIf="isShown" #alert>
+  <div class="icon-container">
+    <img [src]="alertTypeIcon" alt="Icon" class="icon">
+  </div>
+  <div class="message-container">
+    <strong>{{alertTypeMessage}}</strong> <br> {{alertInfoMessage}}
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="closeAlert()"></button>
+</div>

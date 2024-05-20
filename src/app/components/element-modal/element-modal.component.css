@@ -1,0 +1,150 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1001;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-header-title {
+  font-size: 1.5rem;
+  font-family: 'bosch-sans-bold', 'arial', sans-serif;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  width: 600px;
+  height: fit-content;
+  max-height: 700px;
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+
+.close-icon {
+  font-size: 40px;
+}
+
+.modal-header-button-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+}
+
+material-symbols-outlined {
+  font-size: 50px;
+}
+
+.card {
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #a4d7ed;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 3px 3px 0;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #bebebe;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+#pseudonym[readonly] {
+  color: darkgray;
+}
+
+.col-form-label {
+  font-family: 'bosch-sans-bold', 'arial', sans-serif;
+  color: #bebebe;
+}
+
+.modal-button {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #008dce;
+  color: white;
+  height: 40px;
+  margin-top: 5%;
+  margin-bottom: 2.5%;
+  box-shadow: 0 5px 8px gray;
+  font-family: 'bosch-sans-regular', sans-serif;
+}
+
+.modal-button:hover {
+  background-color: #0270a4;
+  color: white;
+}
+
+.modal-footer {
+  border: none;
+}
+
+.error-message {
+  color: red;
+  max-height: 3em;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  overflow: auto;
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bdbdbd;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #bdbdbd;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #bdbdbd;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.5em;
+  height: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}

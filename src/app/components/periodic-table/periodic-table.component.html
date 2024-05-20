@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Periodic Table</title>
+</head>
+<body>
+<app-element-modal #addElementModalComponent
+                   [modalType]="ModalType.ADD"
+                   [modalTitle]="'Add element'"
+                   [modalButton]="'Save'"
+                   (modalResponse)="handleModalResponse($event)"
+></app-element-modal>
+<app-element-modal #editElementModalComponent
+                   [modalType]="ModalType.EDIT"
+                   [modalTitle]="'Edit element'"
+                   [modalButton]="'Update'"
+                   (modalResponse)="handleModalResponse($event)"
+></app-element-modal>
+<app-popup-alert></app-popup-alert>
+<div class="container">
+  <div class="header-container">
+    <app-header #specialHeaderComponent
+                [backgroundImage]="'assets/images/header-image.jpg'"
+                [buttonIcon]="'assets/icons/add-icon.svg'"
+                [buttonText]="'Add new element'"
+    ></app-header>
+  </div>
+  <div class="table-container">
+    <app-data-table #elementTablePaginatedComponent
+                    (selectedElementValue)="handleSelectedElement($event)">
+    </app-data-table>
+  </div>
+</div>
+</body>
+</html>

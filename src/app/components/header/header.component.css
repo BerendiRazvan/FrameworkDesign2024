@@ -1,0 +1,62 @@
+.special-header-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 1% auto 0 auto;
+  height: 95%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header-image {
+  position: absolute;
+  object-fit: scale-down;
+  margin: 0;
+  height: 100%;
+  width: auto;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: 0;
+}
+
+@media screen and (max-width: 650px) {
+  .header-image {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 350px) {
+  .header-image {
+    display: none;
+  }
+}
+
+.button-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  left: auto;
+  right: 5%;
+  top: auto;
+  bottom: auto;
+  margin: auto;
+  height: 2.5em;
+  width: 15em;
+}
+
+:host ::ng-deep button.btn-light.button-with-icon {
+  background-color: rgba(210, 210, 210, 0.5);
+}
+
+:host ::ng-deep button.btn-light.button-with-icon:hover {
+  background-color: rgba(210, 210, 210, 0.75);
+}
+

@@ -1,0 +1,88 @@
+<div class="wrapper">
+  <button class="page-control-button left-side-control" mat-button
+          [disabled]="pageIndex == 0"
+          (click)="firstPage(); updatePageIndex();">
+    <div class="button-content">
+      <span class="material-symbols-outlined">first_page</span>
+    </div>
+  </button>
+  <button class="page-control-button left-side-control" style="margin-right: 7px;" mat-button
+          [disabled]="pageIndex == 0"
+          (click)="previousPage(); updatePageIndex();">
+    <div class="button-content button-content-left">
+      <span class="material-symbols-outlined">navigate_before</span>
+      <span>Previous</span>
+    </div>
+  </button>
+
+  <button class="page-index-button" mat-button
+          *ngIf="isPageVisible(-1)"
+          [ngClass]="setSelectedStyle(1)"
+          (click)="emitPageEvent(0)">1
+  </button>
+  <button class="page-index-button" mat-button
+          *ngIf="isPageVisible(0)"
+          [ngClass]="setSelectedStyle(pagesNumberList[0])"
+          [disabled]="hidePageNumber(pagesNumberList[0]) == hiddenPageValue"
+          (click)="emitPageEvent(pagesNumberList[0] - 1)">
+    {{hidePageNumber(pagesNumberList[0])}}
+  </button>
+  <button class="page-index-button" mat-button
+          *ngIf="isPageVisible(1)"
+          [ngClass]="setSelectedStyle(pagesNumberList[1])"
+          (click)="emitPageEvent(pagesNumberList[1] - 1)">
+    {{pagesNumberList[1]}}
+  </button>
+  <button class="page-index-button" mat-button
+          *ngIf="isPageVisible(2)"
+          [ngClass]="setSelectedStyle(pagesNumberList[2])"
+          (click)="emitPageEvent(pagesNumberList[2] - 1)">
+    {{pagesNumberList[2]}}
+  </button>
+  <button class="page-index-button" mat-button
+          *ngIf="isPageVisible(3)"
+          [ngClass]="setSelectedStyle(pagesNumberList[3])"
+          (click)="emitPageEvent(pagesNumberList[3] - 1)">
+    {{pagesNumberList[3]}}
+  </button>
+  <button class="page-index-button" mat-button
+          *ngIf="isPageVisible(4)"
+          [ngClass]="setSelectedStyle(pagesNumberList[4])"
+          (click)="emitPageEvent(pagesNumberList[4] - 1)">
+    {{pagesNumberList[4]}}
+  </button>
+  <button class="page-index-button" mat-button
+          *ngIf="isPageVisible(5)"
+          [ngClass]="setSelectedStyle(pagesNumberList[5])"
+          (click)="emitPageEvent(pagesNumberList[5] - 1)">
+    {{pagesNumberList[5]}}
+  </button>
+  <button class="page-index-button" mat-button
+          *ngIf="isPageVisible(6)"
+          [ngClass]="setSelectedStyle(pagesNumberList[6])"
+          [disabled]="hidePageNumber(pagesNumberList[6]) === hiddenPageValue"
+          (click)="emitPageEvent(pagesNumberList[6] - 1)">
+    {{hidePageNumber(pagesNumberList[6])}}
+  </button>
+  <button class="page-index-button" mat-button
+          [ngClass]="setSelectedStyle(getMaxPageNumber())"
+          (click)="emitPageEvent(getMaxPageNumber() - 1)">
+    {{getMaxPageNumber()}}
+  </button>
+
+  <button class="page-control-button right-side-control" style="margin-left: 7px;" mat-button
+          [disabled]="pageIndex + 1 == getMaxPageNumber()"
+          (click)="nextPage(); updatePageIndex();">
+    <div class="button-content button-content-right">
+      <span>Next</span>
+      <span class="material-symbols-outlined">navigate_next</span>
+    </div>
+  </button>
+  <button class="page-control-button right-side-control" mat-button
+          [disabled]="pageIndex + 1 == getMaxPageNumber()"
+          (click)="lastPage(); updatePageIndex();">
+    <div class="button-content">
+      <span class="material-symbols-outlined">last_page</span>
+    </div>
+  </button>
+</div>

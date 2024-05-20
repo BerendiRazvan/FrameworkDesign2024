@@ -1,0 +1,56 @@
+.button-with-icon {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 2.5em;
+  width: 15em;
+  background-color: transparent;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.button-with-icon:hover {
+  background-color: rgba(210, 210, 210, 0.5);
+}
+
+.button-with-icon:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+
+.icon {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0 3% 0 auto;
+  height: 1.75em;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto 0 3%;
+  height: 1.75em;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

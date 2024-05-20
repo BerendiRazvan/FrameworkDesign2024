@@ -1,0 +1,47 @@
+<div class="modal-backdrop" *ngIf="(modalOpen$ | async)">
+  <div class="modal">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+        <h3 class="modal-header-title">{{ modalTitle }}</h3>
+        <button class="modal-header-button-icon" (click)="closeModal()"><i
+          class="material-symbols-outlined close-icon">cancel</i>
+        </button>
+      </div>
+      <div class="modal-body card">
+        <form [formGroup]="periodicElementForm">
+          <div class="form-group">
+            <label for="name" class="col-form-label">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name" value='{{name}}'
+                   (change)="resetNameError()"
+                   placeholder="Enter a name for the periodic element">
+            <div #nameFieldError class="error-message">{{nameErrorMessage}}</div>
+          </div>
+          <div class="form-group">
+            <label for="symbol" class="col-form-label">Symbol</label>
+            <input type="text" class="form-control" id="symbol" formControlName="symbol" value='{{symbol}}'
+                   (change)="resetSymbolError()"
+                   placeholder="Enter a symbol for the periodic element">
+            <div #symbolFieldError class="error-message">{{symbolErrorMessage}}</div>
+          </div>
+          <div class="form-group">
+            <label for="weight" class="col-form-label">Weight</label>
+            <input type="text" class="form-control" id="weight" formControlName="weight" value='{{weight}}'
+                   (change)="resetWeightError()"
+                   placeholder="Enter a weight for the periodic element">
+            <div #weightFieldError class="error-message">{{weightErrorMessage}}</div>
+          </div>
+          <div class="form-group">
+            <label for="description" class="col-form-label">Description</label>
+            <textarea class="form-control" id="description" formControlName="description" value='{{description}}'
+                      (change)="resetDescriptionError()" style="min-height: 100px;"
+                      placeholder="Enter a description for the periodic element"></textarea>
+            <div #descriptionFieldError class="error-message">{{descriptionErrorMessage}}</div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-button" (click)="onSubmit()">{{ modalButton }} </button>
+      </div>
+    </div>
+  </div>
+</div>
