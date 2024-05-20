@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AlertType} from "../../model/popup-alert/alert-type.enum";
+import {AlertType} from "./alert-type.enum";
 
 @Component({
   selector: 'app-popup-alert',

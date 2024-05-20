@@ -8,7 +8,7 @@ import {PeriodicElement} from "../../model/periodic-element/periodic-element.mod
 import {PeriodicElementService} from "../../service/periodic-element/periodic-element.service";
 import {Page} from "../../model/page/page.model";
 import {animate, state, style, transition, trigger} from "@angular/animations";
-import {AlertType} from "../../model/popup-alert/alert-type.enum";
+import {AlertType} from "../popup-alert/alert-type.enum";
 
 @Component({
   selector: 'app-data-table',

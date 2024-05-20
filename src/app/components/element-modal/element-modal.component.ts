@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from "@angular/core";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Subject} from "rxjs";
-import {AlertType} from "../../model/popup-alert/alert-type.enum";
+import {AlertType} from "../popup-alert/alert-type.enum";
 import {PeriodicElementService} from "../../service/periodic-element/periodic-element.service";
 import {ModalType} from "../../model/modal/modal-type.enum";
 import {ModalInterface} from "../../model/modal/modal.interface";

@@ -1,7 +1,7 @@
 import {Component, ViewChild} from "@angular/core";
 import {PopupAlertComponent} from "../popup-alert/popup-alert.component";
 import {ModalType} from "../../model/modal/modal-type.enum";
-import {AlertType} from "../../model/popup-alert/alert-type.enum";
+import {AlertType} from "../popup-alert/alert-type.enum";
 import {DataTableComponent} from "../data-table/data-table.component";
 import {HeaderComponent} from "../header/header.component";
 import {ElementModalComponent} from "../element-modal/element-modal.component";
